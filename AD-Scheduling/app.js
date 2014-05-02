@@ -10,6 +10,8 @@ var db = mongo.db('mongodb://localhost:27017/AD-Scheduling', {native_parser: tru
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var events = require('./routes/events');
+var refs = require('./routes/refs');
 
 var app = express();
 
@@ -23,6 +25,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//pass the db to the request
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
 
 app.use('/', routes);
 app.use('/users', users);

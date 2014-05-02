@@ -5,3 +5,43 @@ block content
   p Welcome to #{title}
   br
   p#explanation This is an application currently in development. The goal is to both improve skills with NodeJS and Express, as well as provide an application that can be used to increase productivity for Athletic Directors (with suggestions and direction provided by a very small school AD -- my Dad).
+    br
+    br
+    h2 Event List
+        #eventList
+            table
+                thead
+                    th Sport
+                    th Date
+                    th Teams
+                    th Location
+                    th Referees
+                    th Conference Match
+                    th Delete?
+                tbody
+    
+    h2 User List
+        #userList
+            table
+                thead
+                    th First Name
+                    th Last Name
+                    th Email
+                    th Phone Number
+                    th School
+                    th Delete?
+                tbody
+
+    h2 Referee List
+        #refList
+            table
+                thead
+                    th First Name
+                    th Last Name
+                    th Email
+                    th Sports Available
+                    th Delete?
+                tbody
+  script(src='/javascripts/refs.js')
+  script(src='/javascripts/events.js')
+  script(src='/javascripts/users.js')

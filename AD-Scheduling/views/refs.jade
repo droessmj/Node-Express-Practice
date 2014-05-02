@@ -2,4 +2,31 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+    br
+    br
+    h2 Referee List
+        #refList
+            table
+                thead
+                    th First Name
+                    th Last Name
+                    th Email
+                    th Sports Available
+                    th Delete?
+                tbody
+
+
+
+    h2 Add Referee
+        #addRef
+            fieldset
+                input#inputFirst(type='text', placeholder='First Name')
+                input#inputLast(type='text', placeholder='Last Name')
+                br
+                input#inputEmail(type='text', placeholder='Email')
+                input#inputSports(type='text', placeholder='Sports')
+                br
+                button#btnAddUser Add User
+
+    script(src='/javascripts/refs.js')

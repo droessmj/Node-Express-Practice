@@ -2,4 +2,35 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+    br
+    br
+    h2 Events List
+        #eventList
+            table
+                thead
+                    th Sport
+                    th Date
+                    th Teams
+                    th Location
+                    th Referees
+                    th Conference Match
+                    th Delete?
+                tbody
+
+
+    h2 Add Event
+    #addUser
+        fieldset
+            input#inputSport(type='text', placeholder='Sport')
+            input#inputDate(type='text', placeholder='Date')
+            input#inputTeams(type='text', placeholder='Teams')
+            br
+            input#inputLocation(type='text', placeholder='Location')
+            input#inputReferees(type='text', placeholder='Referees')
+            input#inputConference(type='text', placeholder='Conference')
+            br
+            button#btnAddUser Add User
+
+
+    script(src='/javascripts/events.js')

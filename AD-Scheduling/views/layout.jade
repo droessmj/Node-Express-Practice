@@ -3,5 +3,17 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='/javascripts/global.js')
   body
+    ul#navigation
+        li
+            a(href="/") Home
+        li 
+            a(href="/refs") Referees
+        li 
+            a(href="/users") Users
+        li 
+            a(href="/events") Events
+
     block content
